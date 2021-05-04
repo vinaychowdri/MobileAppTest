@@ -62,6 +62,7 @@ public class Ecommerce_tc_4 extends Base{
 			
 			System.out.println(totalvalue+"sum of product number");
 			Assert.assertEquals(sumoftotal, totalvalue);
+			System.out.println("*************************************");
 			service.stop();
 			
 	}
