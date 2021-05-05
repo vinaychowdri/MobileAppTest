@@ -6,6 +6,7 @@ import java.util.concurrent.TimeUnit;
 
 import org.openqa.selenium.By;
 import org.testng.Assert;
+import org.testng.annotations.BeforeTest;
 import org.testng.annotations.Test;
 
 import io.appium.java_client.MobileBy;
@@ -17,6 +18,7 @@ public class Ecommerce_tc_4 extends Base{
 	@Test
 	public void totalValidation() throws InterruptedException, IOException {
 		// TODO Auto-generated method stub
+		
 		service=startServer();
 		AndroidDriver<AndroidElement> driver=Capabilities("GeneralStoreApp");
 		driver.manage().timeouts().implicitlyWait(10, TimeUnit.SECONDS);
@@ -65,5 +67,13 @@ public class Ecommerce_tc_4 extends Base{
 			System.out.println("*************************************");
 			service.stop();
 			
+	}
+	
+	
+	@BeforeTest
+	public void KillAllNodes() throws IOException, InterruptedException
+	{
+		Runtime.getRuntime().exec("taskkill /F /IM node.exe");
+		Thread.sleep(3000);
 	}
 }

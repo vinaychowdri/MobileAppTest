@@ -2,12 +2,16 @@
 <testng-results skipped="0" failed="0" ignored="0" total="1" passed="1">
   <reporter-output>
   </reporter-output>
-  <suite name="Suite" duration-ms="181324" started-at="2021-04-21T11:23:06 IST" finished-at="2021-04-21T11:26:08 IST">
+  <suite name="Suite" duration-ms="134581" started-at="2021-05-05T16:25:17 IST" finished-at="2021-05-05T16:27:32 IST">
     <groups>
     </groups>
-    <test name="Test" duration-ms="181324" started-at="2021-04-21T11:23:06 IST" finished-at="2021-04-21T11:26:08 IST">
+    <test name="Test" duration-ms="134581" started-at="2021-05-05T16:25:17 IST" finished-at="2021-05-05T16:27:32 IST">
       <class name="AppiumFramework.AppiumFramework.Ecommerce_tc_4">
-        <test-method status="PASS" signature="totalValidation()[pri:0, instance:AppiumFramework.AppiumFramework.Ecommerce_tc_4@4e718207]" name="totalValidation" duration-ms="181171" started-at="2021-04-21T11:23:07 IST" finished-at="2021-04-21T11:26:08 IST">
+        <test-method status="PASS" signature="KillAllNodes()[pri:0, instance:AppiumFramework.AppiumFramework.Ecommerce_tc_4@149494d8]" name="KillAllNodes" is-config="true" duration-ms="3041" started-at="2021-05-05T16:25:17 IST" finished-at="2021-05-05T16:25:20 IST">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- KillAllNodes -->
+        <test-method status="PASS" signature="totalValidation()[pri:0, instance:AppiumFramework.AppiumFramework.Ecommerce_tc_4@149494d8]" name="totalValidation" duration-ms="131496" started-at="2021-05-05T16:25:20 IST" finished-at="2021-05-05T16:27:32 IST">
           <reporter-output>
           </reporter-output>
         </test-method> <!-- totalValidation -->

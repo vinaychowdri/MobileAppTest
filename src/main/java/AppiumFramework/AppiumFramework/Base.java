@@ -17,6 +17,7 @@ import io.appium.java_client.service.local.AppiumDriverLocalService;
 
 public class Base {
 	public static AppiumDriverLocalService service;
+	
 	public AppiumDriverLocalService startServer() {
 		boolean flag=checkIfServerIsRunning(4723);
 		if(!flag) {
@@ -39,7 +40,13 @@ public class Base {
 		return isServerRunning;
 	}
 
-	public static AndroidDriver<AndroidElement> Capabilities(String app) throws IOException {
+	public static  void startEmulator() throws IOException, InterruptedException
+	{
+		//C:\Users\VINAYA\eclipse-workspace\AppiumFramework\src\main\java\resources\startEmulator.bat
+		Runtime.getRuntime().exec(System.getProperty("user.dir")+"\\src\\main\\java\\resources\\startEmulator.bat");
+		Thread.sleep(6000);
+	}
+	public static AndroidDriver<AndroidElement> Capabilities(String app) throws IOException, InterruptedException {
 		// TODO Auto-generated method stub
 
 		
@@ -56,6 +63,10 @@ public class Base {
 		
 		
 			String device=(String) prop.get("device");
+			if(device.contains("New"))
+			{
+				startEmulator();
+			}
 		cap.setCapability(MobileCapabilityType.DEVICE_NAME, device);
 		cap.setCapability(MobileCapabilityType.AUTOMATION_NAME, "uiautomator2");
 		cap.setCapability(MobileCapabilityType.NEW_COMMAND_TIMEOUT, 18);
